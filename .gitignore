@@ -1,0 +1,19 @@
+# Fleet IDE
+.idea/
+workspace.xml
+
+# GoLang
+*.o
+*.a
+[Bb]in
+[Tt]est.*
+[Uu]nit.*
+*.coverprofile
+
+# Docker
+Dockerfile*  # Matches any Dockerfile or Dockerfile.prod etc.
+.dockerignore
+build/       # Folder created by docker build
+volumes/     # Folder for named volumes
+images/      # Folder for pre-built images (optional)
+.env         # Environment variables (use .env.example instead)

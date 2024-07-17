@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        
+        {
+            "name": "Run local server",
+            "type": "go",
+            "workingDir": "$PROJECT_DIR$/cmd/server",
+            "goExecPath": "go",
+            "buildParams": ["$PROJECT_DIR$/cmd/server/main.go"]
+        },
+        {
+            "type": "command",
+            "name": "Docker build",
+            "program": "make",
+        },
+        {
+            "type": "command",
+            "name": "Docker run",
+            "program": "make",
+            "args": ["run"],
+        },
+        
+    ]
+}
