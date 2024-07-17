@@ -22,4 +22,4 @@
 ## API Endpoints
 
 - **GET /**: Welcome message.
-- **GET /healthz**: Health check endpoint.
+- **GET /health**: Health check endpoint.
