@@ -4,17 +4,14 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
 	"github.com/sirupsen/logrus"
 	"github.com/tmaffia/pkg/handlers"
 )
 
 func main() {
-	r := chi.NewRouter()
-	r.Use(middleware.Logger)
-	r.Get("/", handlers.HomeHandler)
-	r.Get("/health", handlers.HealthCheckHandler)
+	r := http.NewServeMux()
+	r.HandleFunc("GET /", handlers.HomeHandler)
+	r.HandleFunc("GET /health", handlers.HealthCheckHandler)
 
 
 	log.Println("API is running!")
